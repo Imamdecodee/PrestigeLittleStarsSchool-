@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student Information Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        h2 {
+            color: #2980b9;
+            margin-top: 25px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        .print-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .print-button:hover {
+            background-color: #2980b9;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            body {
+                background-color: white;
+            }
+            
+            .form-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>New Student Information Form</h1>
+        
+        <p>Welcome to our school community! Please complete this form to help us better understand your child's needs, interests, and background. All information will be kept confidential.</p>
+        
+        <div class="section">
+            <h2>Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="preferredName">Preferred Name/Nickname</label>
+                <input type="text" id="preferredName" name="preferredName">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth <span class="required">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                    <option value="">Please select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="homeLanguage">Home Language(s) <span class="required">*</span></label>
+                <input type="text" id="homeLanguage" name="homeLanguage" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="countryOfBirth">Country of Birth</label>
+                <input type="text" id="countryOfBirth" name="countryOfBirth">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Family Information</h2>
+            
+            <div class="form-group">
+                <label for="parent1Name">Parent/Guardian 1 Name <span class="required">*</span></label>
+                <input type="text" id="parent1Name" name="parent1Name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent1Relationship">Relationship to Student <span class="required">*</span></label>
+                <input type="text" id="parent1Relationship" name="parent1Relationship" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent1Phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="parent1Phone" name="parent1Phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent1Email">Email Address <span class="required">*</span></label>
+                <input type="email" id="parent1Email" name="parent1Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="parent2Name">Parent/Guardian 2 Name</label>
+                <input type="text" id="parent2Name" name="parent2Name">
+            </div>
+            
+            <div class="form-group">
+                <label for="parent2Relationship">Relationship to Student</label>
+                <input type="text" id="parent2Relationship" name="parent2Relationship">
+            </div>
+            
+            <div class="form-group">
+                <label for="parent2Phone">Phone Number</label>
+                <input type="tel" id="parent2Phone" name="parent2Phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="parent2Email">Email Address</label>
+                <input type="email" id="parent2Email" name="parent2Email">
+            </div>
+            
+            <div class="form-group">
+                <label for="emergencyContact">Emergency Contact (other than parents) <span class="required">*</span></label>
+                <input type="text" id="emergencyContact" name="emergencyContact" required>
+                <label for="emergencyPhone">Emergency Contact Phone <span class="required">*</span></label>
+                <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="siblings">Siblings (names and ages)</label>
+                <textarea id="siblings" name="siblings"></textarea>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Academic Information</h2>
+            
+            <div class="form-group">
+                <label for="previousSchool">Previous School Attended</label>
+                <input type="text" id="previousSchool" name="previousSchool">
+            </div>
+            
+            <div class="form-group">
+                <label for="previousGrade">Previous Grade/Year Completed</label>
+                <input type="text" id="previousGrade" name="previousGrade">
+            </div>
+            
+            <div class="form-group">
+                <label for="favoriteSubjects">Favorite Subjects/Areas of Interest</label>
+                <textarea id="favoriteSubjects" name="favoriteSubjects"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="challengingSubjects">Subjects That Have Been Challenging</label>
+                <textarea id="challengingSubjects" name="challengingSubjects"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="extracurricular">Extracurricular Activities (sports, arts, clubs, etc.)</label>
+                <textarea id="extracurricular" name="extracurricular"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="learningSupport">Has your child ever received additional learning support? <span class="required">*</span></label>
+                <select id="learningSupport" name="learningSupport" required>
+                    <option value="">Please select</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="supportDetails">If yes, please provide details:</label>
+                <textarea id="supportDetails" name="supportDetails"></textarea>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Health & Medical Information</h2>
+            
+            <div class="form-group">
+                <label for="allergies">Does your child have any allergies? <span class="required">*</span></label>
+                <select id="allergies" name="allergies" required>
+                    <option value="">Please select</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="allergyDetails">If yes, please specify allergies and reactions:</label>
+                <textarea id="allergyDetails" name="allergyDetails"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="medicalConditions">Does your child have any ongoing medical conditions? <span class="required">*</span></label>
+                <select id="medicalConditions" name="medicalConditions" required>
+                    <option value="">Please select</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="medicalDetails">If yes, please provide details:</label>
+                <textarea id="medicalDetails" name="medicalDetails"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="medications">Is your child currently taking any medications? <span class="required">*</span></label>
+                <select id="medications" name="medications" required>
+                    <option value="">Please select</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="medicationDetails">If yes, please specify medication, dosage, and administration instructions:</label>
+                <textarea id="medicationDetails" name="medicationDetails"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="doctorName">Doctor's Name</label>
+                <input type="text" id="doctorName" name="doctorName">
+            </div>
+            
+            <div class="form-group">
+                <label for="doctorPhone">Doctor's Phone Number</label>
+                <input type="tel" id="doctorPhone" name="doctorPhone">
+            </div>
+            
+            <div class="form-group">
+                <label for="insurance">Medical Insurance Information</label>
+                <input type="text" id="insurance" name="insurance">
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Additional Information</h2>
+            
+            <div class="form-group">
+                <label for="strengths">What do you consider to be your child's greatest strengths?</label>
+                <textarea id="strengths" name="strengths"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="concerns">Do you have any specific concerns about your child's education or adjustment to our school?</label>
+                <textarea id="concerns" name="concerns"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="goals">What are your hopes and goals for your child this school year?</label>
+                <textarea id="goals" name="goals"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="additionalInfo">Is there any other information you would like to share about your child?</label>
+                <textarea id="additionalInfo" name="additionalInfo"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>How did you hear about our school?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hearAbout" value="friends"> Friends/Family</label>
+                    <label><input type="checkbox" name="hearAbout" value="website"> School Website</label>
+                    <label><input type="checkbox" name="hearAbout" value="social"> Social Media</label>
+                    <label><input type="checkbox" name="hearAbout" value="event"> Community Event</label>
+                    <label><input type="checkbox" name="hearAbout" value="other"> Other</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Permissions</h2>
+            
+            <div class="form-group">
+                <label><input type="checkbox" name="photoPermission" required> I give permission for my child to be photographed/videoed for school purposes (yearbook, website, classroom projects) <span class="required">*</span></label>
+            </div>
+            
+            <div class="form-group">
+                <label><input type="checkbox" name="fieldTripPermission"> I give permission for my child to participate in local field trips</label>
+            </div>
+            
+            <div class="form-group">
+                <label><input type="checkbox" name="internetPermission"> I give permission for my child to use the internet for educational purposes under teacher supervision</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="signature">Parent/Guardian Signature <span class="required">*</span></label>
+                <input type="text" id="signature" name="signature" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="signatureDate">Date <span class="required">*</span></label>
+                <input type="date" id="signatureDate" name="signatureDate" required>
+            </div>
+        </div>
+        
+        <button class="print-button" onclick="window.print()">Print This Form</button>
+    </div>
+</body>
+</html>
